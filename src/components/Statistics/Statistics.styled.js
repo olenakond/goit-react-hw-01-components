@@ -3,10 +3,13 @@ import { getRandomHexColor } from '../Utils/randomColor';
 
 export const StatSection = styled('section')(() => {
   return {
+    display: 'flex',
+    flexDirection: 'column',
+    gap: 20,
     backgroundColor: 'white',
-    width: 800,
+    width: 750,
     margin: '60px auto 0 auto',
-    padding: '20px 0 20px 0',
+    padding: '20px 0 0 0',
     border: 'solid 2px grey',
     borderRadius: 10,
   };
@@ -22,7 +25,7 @@ export const StatTitle = styled('h2')(() => {
 
 export const StatList = styled('ul')(() => {
   return {
-    marginTop: 40,
+    marginTop: 'auto',
     display: 'flex',
     flexWrap: 'wrap',
     justifyContent: 'center',
@@ -35,8 +38,7 @@ export const StatElement = styled('li')(() => {
     gap: 10,
     flexDirection: 'column',
     paddingBottom: 20,
-    border: 'solid 1px grey',
-    flexBasis: 'calc(100%/4)',
+    flexBasis: 'calc(100%/5)',
     backgroundColor: getRandomHexColor(),
   };
 });

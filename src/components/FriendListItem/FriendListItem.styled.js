@@ -17,7 +17,7 @@ export const FriendCard = styled('li')(() => {
 export const FriendStatus = styled('span')(({ isOnline }) => {
   return {
     display: 'block',
-    backgroundColor: isOnline ? 'green' : 'red',
+    // backgroundColor: isOnline ? 'green' : 'red',
     border: 'solid 1px grey',
     borderRadius: '50%',
     width: 20,

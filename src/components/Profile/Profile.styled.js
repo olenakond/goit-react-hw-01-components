@@ -2,6 +2,8 @@ import { styled } from 'styled-components';
 
 export const ProfileCard = styled('div')(() => {
   return {
+    display: 'flex',
+    flexDirection: 'column',
     backgroundColor: 'white',
     width: 500,
     height: 700,
@@ -55,7 +57,7 @@ export const ProfileLocation = styled('p')(() => {
 
 export const ProfileStat = styled('ul')(() => {
   return {
-    marginTop: 40,
+    marginTop: 'auto',
     backgroundColor: '#f5f6f8',
     display: 'flex',
     height: 150,
