@@ -30,7 +30,7 @@ export const ProfileImg = styled('img')(() => {
 
 export const ProfileName = styled('p')(() => {
   return {
-    marginTop: 30,
+    marginTop: 50,
     fontSize: 35,
     fontWeight: 700,
     textAlign: 'center',

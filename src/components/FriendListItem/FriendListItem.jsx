@@ -10,7 +10,7 @@ export const FriendListItem = ({ avatar, name, isOnline }) => {
   return (
     <FriendCard>
       <FriendStatus
-      // isOnline={isOnline}
+        style={{ backgroundColor: isOnline ? 'green' : 'red' }}
       ></FriendStatus>
       <FriendImg src={avatar} alt="User avatar" width="70" />
       <FriendName>{name}</FriendName>
