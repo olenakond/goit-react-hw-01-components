@@ -1,6 +1,6 @@
 import { styled } from 'styled-components';
 
-export const ProfileCard = styled('div')(() => {
+export const Card = styled('div')(() => {
   return {
     display: 'flex',
     flexDirection: 'column',
@@ -14,13 +14,13 @@ export const ProfileCard = styled('div')(() => {
   };
 });
 
-export const ProfileInfo = styled('div')(() => {
+export const Info = styled('div')(() => {
   return {
     padding: '20px 20px 20px 20px',
   };
 });
 
-export const ProfileImg = styled('img')(() => {
+export const Img = styled('img')(() => {
   return {
     margin: '0 auto',
     borderRadius: '50%',
@@ -28,7 +28,7 @@ export const ProfileImg = styled('img')(() => {
   };
 });
 
-export const ProfileName = styled('p')(() => {
+export const Name = styled('p')(() => {
   return {
     marginTop: 50,
     fontSize: 35,
@@ -37,7 +37,7 @@ export const ProfileName = styled('p')(() => {
   };
 });
 
-export const ProfileTag = styled('p')(() => {
+export const Tag = styled('p')(() => {
   return {
     marginTop: 20,
     fontSize: 25,
@@ -46,7 +46,7 @@ export const ProfileTag = styled('p')(() => {
   };
 });
 
-export const ProfileLocation = styled('p')(() => {
+export const Location = styled('p')(() => {
   return {
     marginTop: 20,
     fontSize: 25,
@@ -55,7 +55,7 @@ export const ProfileLocation = styled('p')(() => {
   };
 });
 
-export const ProfileStat = styled('ul')(() => {
+export const Stat = styled('ul')(() => {
   return {
     marginTop: 'auto',
     backgroundColor: '#f5f6f8',
@@ -64,7 +64,7 @@ export const ProfileStat = styled('ul')(() => {
   };
 });
 
-export const ProfileStatElement = styled('li')(() => {
+export const StatElement = styled('li')(() => {
   return {
     display: 'flex',
     gap: 10,
@@ -74,7 +74,7 @@ export const ProfileStatElement = styled('li')(() => {
   };
 });
 
-export const ProfileStatTitle = styled('span')(() => {
+export const StatTitle = styled('span')(() => {
   return {
     marginTop: 20,
     fontSize: 20,
@@ -83,7 +83,7 @@ export const ProfileStatTitle = styled('span')(() => {
   };
 });
 
-export const ProfileStatValue = styled('span')(() => {
+export const StatValue = styled('span')(() => {
   return {
     marginTop: 20,
     fontSize: 30,

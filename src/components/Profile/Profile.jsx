@@ -1,41 +1,41 @@
 import PropTypes from 'prop-types';
 import {
-  ProfileCard,
-  ProfileInfo,
-  ProfileStat,
-  ProfileImg,
-  ProfileName,
-  ProfileTag,
-  ProfileLocation,
-  ProfileStatElement,
-  ProfileStatTitle,
-  ProfileStatValue,
+  Card,
+  Info,
+  Stat,
+  Img,
+  Name,
+  Tag,
+  Location,
+  StatElement,
+  StatTitle,
+  StatValue,
 } from './Profile.styled';
 
 export const Profile = ({ username, tag, location, avatarUrl, stats }) => {
   return (
-    <ProfileCard>
-      <ProfileInfo>
-        <ProfileImg src={avatarUrl} alt="User avatar" width="250px" />
-        <ProfileName>{username}</ProfileName>
-        <ProfileTag>@{tag}</ProfileTag>
-        <ProfileLocation>{location}</ProfileLocation>
-      </ProfileInfo>
-      <ProfileStat>
-        <ProfileStatElement>
-          <ProfileStatTitle>Followers</ProfileStatTitle>
-          <ProfileStatValue>{stats.followers}</ProfileStatValue>
-        </ProfileStatElement>
-        <ProfileStatElement>
-          <ProfileStatTitle>Views</ProfileStatTitle>
-          <ProfileStatValue>{stats.views}</ProfileStatValue>
-        </ProfileStatElement>
-        <ProfileStatElement>
-          <ProfileStatTitle>Likes</ProfileStatTitle>
-          <ProfileStatValue>{stats.likes}</ProfileStatValue>
-        </ProfileStatElement>
-      </ProfileStat>
-    </ProfileCard>
+    <Card>
+      <Info>
+        <Img src={avatarUrl} alt="User avatar" width="250px" />
+        <Name>{username}</Name>
+        <Tag>@{tag}</Tag>
+        <Location>{location}</Location>
+      </Info>
+      <Stat>
+        <StatElement>
+          <StatTitle>Followers</StatTitle>
+          <StatValue>{stats.followers}</StatValue>
+        </StatElement>
+        <StatElement>
+          <StatTitle>Views</StatTitle>
+          <StatValue>{stats.views}</StatValue>
+        </StatElement>
+        <StatElement>
+          <StatTitle>Likes</StatTitle>
+          <StatValue>{stats.likes}</StatValue>
+        </StatElement>
+      </Stat>
+    </Card>
   );
 };
 
@@ -48,5 +48,5 @@ Profile.propTypes = {
     followers: PropTypes.number.isRequired,
     views: PropTypes.number.isRequired,
     likes: PropTypes.number.isRequired,
-  }),
+  }).isRequired,
 };

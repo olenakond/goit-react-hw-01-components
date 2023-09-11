@@ -1,38 +1,29 @@
 import PropTypes from 'prop-types';
-import {
-  TransactionsTable,
-  TransactionsHead,
-  TransactionsHeadEl,
-  TransactionsEl,
-} from './TransactionHistory.styled';
+import { Table, Head, HeadEl, El, Row } from './TransactionHistory.styled';
 
 export const TransactionHistory = ({ items }) => {
   return (
-    <TransactionsTable>
-      <TransactionsHead>
+    <Table>
+      <Head>
         <tr>
-          <TransactionsHeadEl>Type</TransactionsHeadEl>
-          <TransactionsHeadEl>Amount</TransactionsHeadEl>
-          <TransactionsHeadEl>Currency</TransactionsHeadEl>
+          <HeadEl>Type</HeadEl>
+          <HeadEl>Amount</HeadEl>
+          <HeadEl>Currency</HeadEl>
         </tr>
-      </TransactionsHead>
+      </Head>
       <tbody>
-        {items.map(({ id, type, amount, currency }, index) => {
+        {items.map(({ id, type, amount, currency }) => {
           const amountToNumber = Math.round(Number(amount));
-          const isEven = index => index % 2 === 0;
           return (
-            <tr
-              style={{ backgroundColor: isEven(index) && '#EBEDEF' }}
-              key={id}
-            >
-              <TransactionsEl>{type}</TransactionsEl>
-              <TransactionsEl>{amountToNumber}</TransactionsEl>
-              <TransactionsEl>{currency}</TransactionsEl>
-            </tr>
+            <Row key={id}>
+              <El>{type}</El>
+              <El>{amountToNumber}</El>
+              <El>{currency}</El>
+            </Row>
           );
         })}
       </tbody>
-    </TransactionsTable>
+    </Table>
   );
 };
 
@@ -44,5 +35,5 @@ TransactionHistory.propTypes = {
       amount: PropTypes.string.isRequired,
       currency: PropTypes.string.isRequired,
     })
-  ),
+  ).isRequired,
 };

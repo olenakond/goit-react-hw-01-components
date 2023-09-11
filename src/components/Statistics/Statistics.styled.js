@@ -1,7 +1,7 @@
 import { styled } from 'styled-components';
-import { getRandomHexColor } from '../Utils/randomColor';
+import { getRandomHexColor } from '../../Utils/randomColor';
 
-export const StatSection = styled('section')(() => {
+export const Section = styled('section')(() => {
   return {
     display: 'flex',
     flexDirection: 'column',
@@ -15,7 +15,7 @@ export const StatSection = styled('section')(() => {
   };
 });
 
-export const StatTitle = styled('h2')(() => {
+export const Title = styled('h2')(() => {
   return {
     fontSize: 35,
     fontWeight: 700,
@@ -23,7 +23,7 @@ export const StatTitle = styled('h2')(() => {
   };
 });
 
-export const StatList = styled('ul')(() => {
+export const List = styled('ul')(() => {
   return {
     marginTop: 'auto',
     display: 'flex',
@@ -32,7 +32,7 @@ export const StatList = styled('ul')(() => {
   };
 });
 
-export const StatElement = styled('li')(() => {
+export const Element = styled('li')(() => {
   return {
     display: 'flex',
     gap: 10,
@@ -43,7 +43,7 @@ export const StatElement = styled('li')(() => {
   };
 });
 
-export const StatElementLabel = styled('span')(() => {
+export const Label = styled('span')(() => {
   return {
     marginTop: 20,
     fontSize: 25,
@@ -52,7 +52,7 @@ export const StatElementLabel = styled('span')(() => {
   };
 });
 
-export const StatElementPercentage = styled('span')(() => {
+export const Percentage = styled('span')(() => {
   return {
     marginTop: 20,
     fontSize: 35,
